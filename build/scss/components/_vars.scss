@@ -1,0 +1,26 @@
+@import "bourbon";
+
+$main-color: #004575;
+$accent-color: #ffcc00;
+
+@mixin button {
+    padding: 0;
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+@mixin pseudo($display: block, $pos: absolute, $content: ''){
+  content: $content;
+  display: $display;
+  position: $pos;
+}
+
+// -webkit-appearance: none;
+// -moz-appearance: none;
+// -ms-appearance: none;
+// -o-appearance: none;
+// appearance: none!important;
+
+// &::-ms-expand {
+//     display: none;
+// }
