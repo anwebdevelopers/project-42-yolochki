@@ -213,10 +213,10 @@ $(function() {
     // Плавный скролл
     //------------------------------------------------
 
-    $('.scroll').click(function(e) {
+    $("a[href*='#']").click(function(e) {
         e.preventDefault();
         var thisSect = $($(this).attr('href')).offset().top;
-        $('html, body').animate({scrollTop: thisSect }, ((Math.abs(thisSect - $(window).scrollTop()) * 0.1) + 1200), 'linear');
+        $('html, body').animate({scrollTop: thisSect }, ((Math.abs(thisSect - $(window).scrollTop()) * 0.1) * 5), 'linear');
     });
 
     //-------------------------------------------------------------
