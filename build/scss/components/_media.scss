@@ -2,11 +2,21 @@
 
 
 @media only screen and (max-width : 1200px) {
-
+	html {
+		font-size: 9px;
+	}
+	.container {
+		max-width: 992px;
+	}
 }
 
 @media only screen and (max-width : 992px) {
-
+	html {
+		font-size: 8px;
+	}
+	.container {
+		max-width: 768px;
+	}
 }
 
 @media only screen and (max-width : 768px) {

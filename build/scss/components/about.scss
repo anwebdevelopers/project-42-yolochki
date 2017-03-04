@@ -1,0 +1,114 @@
+.about {
+    display: flex;
+    flex-wrap: wrap;
+}
+.about__item {
+    flex-shrink: 1;
+    display: block;
+    width: 25%;
+    min-height: 30rem;
+    margin: 0 0 5rem 0;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+
+}
+.about__item_video {
+    position: relative;
+    &:before {
+        content: '';
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        background-image: url(../img/sprites.png);
+        background-repeat: no-repeat;
+        background-position: 0 -53px ;
+        width: 86px;
+        height: 86px;
+        opacity: .7;
+        transition: all .5s ease;
+    }
+    &:hover, &:active, &:focus {
+        &:before {
+            opacity: 1;
+        }
+    }
+}
+.about__item_with_inner {
+    margin: 0;
+    &:hover, &:active, &:focus, &.active {
+        .about__item-inner {
+            opacity: 1;
+        }
+    }
+}
+.about__item-inner {
+    padding: 2.5rem;
+    text-align: center;
+    background-color: #d7ac78;
+    background-image: url(../img/bg-about-inner.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    transition: all .5s ease;
+    opacity: 0;
+}
+.about__item-content {
+    max-width: 25rem;
+    width: 100%;
+    margin: 0 auto;
+}
+.about__item-img {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    img {
+        max-width: 100%;
+        width: auto;
+        height: auto;
+    }
+}
+.about__item-text {
+    font-size: 2rem;
+    line-height: 1.2;
+    font-weight: 900;
+    color: #000;
+    p {
+        margin: 0;
+        padding: 2rem 0;
+        border-bottom: 1px solid #000;
+        &:last-child() {
+            border: none;
+        }
+    }
+}
+
+
+@media only screen and (max-width : 1200px) {
+
+}
+
+@media only screen and (max-width : 992px) {
+    .about__item {
+        width: 50%;
+        margin: 0;
+    }
+}
+
+@media only screen and (max-width : 768px) {
+
+}
+
+@media only screen and (max-width : 480px) {
+    .about {
+        display: block;
+    }
+    .about__item {
+        width: auto;
+    }
+}
+
+@media only screen and (max-width : 320px) {
+
+}

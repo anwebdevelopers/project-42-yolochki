@@ -1,9 +1,8 @@
 @import "bourbon";
 
-$main-color: #004575;
-$accent-color: #ffcc00;
+$main-color: #00b567;
 
-@mixin button {
+@mixin btn {
     padding: 0;
     border: none;
     outline: none;
