@@ -1,0 +1,230 @@
+.footer {
+    margin: 12rem 0 0 0;
+    padding: 0 0 9rem 0;
+    background-color: $main-color;
+}
+.footer__container {
+    @extend .container;
+}
+
+.reviews {
+    padding: 7rem 0;
+}
+.reviews__title {
+    @extend .title;
+    @extend .title_color_white;
+}
+.reviews__box {
+    margin: 5rem 0 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start
+}
+.reviews__item {
+    display: flex;;
+    width: 46.5%;
+    margin: 0 0 4rem 0;
+    &:nth-child(even) {
+        margin: 0 0 4rem 7%;
+    }
+}
+.reviews__item-img {
+    width: 22%;
+    img {
+        max-width: 100%;
+        width: auto;
+        height: auto;
+        border-radius: 50%;
+    }
+}
+.reviews__item-text {
+    align-self: center;
+    width: 73%;
+    margin: 0 0 0 5%;
+    font-size: 1.6;
+    line-height: 1.2;
+    font-weight: 400;
+    color: #fff;
+    p {
+        margin: 0;
+    }
+}
+.reviews__wiget {
+    margin: 2rem 0 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.reviews__wiget-item {
+    margin: 1rem .5rem;
+}
+.contacts {
+    position: relative;
+    padding: 6rem 0 0 0;
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 50%;
+        max-width: 40rem;
+        width: 100%;
+    	height: 3px;
+        transform: translateX(-50%);
+        background-image: url(../img/sprites.png);
+        background-repeat: repeat-x;
+        background-position: 0 0;
+    }
+}
+.contacts__title {
+    @extend .title;
+    @extend .title_color_white;
+}
+.contacts__box {
+    margin: 5rem 0 0 0;
+    text-align: center;
+}
+.contacts__text {
+    font-size: 1.6rem;
+    line-height: 1.2;
+    font-weight: 400;
+    color: #fff;
+    p {
+        margin: 0;
+    }
+}
+.contacts__link {
+    font-size: 1.6rem;
+    line-height: 1.2;
+    font-weight: 400;
+    a {
+        position: relative;
+        color: #fff;
+        text-decoration: none;
+        &:after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            right: 50%;
+            bottom: 0;
+            height: 1px;
+            background-color: #fff;
+            transition: all .3s ease;
+        }
+        transition: all .5s ease;
+        &:hover, &:active, &:focus {
+            &:after {
+                left: 0;
+                right: 0;
+            }
+        }
+    }
+}
+.footer__button {
+    margin: 6rem 0 0 0;
+    text-align: center;
+    a {
+        position: relative;
+        padding-left: 3rem;
+        padding-right: 3rem;
+        &:before, &:after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        	width: 57px;
+        	height: 44px;
+            background-image: url(../img/sprites.png);
+            background-repeat: no-repeat;
+            background-position: 0 -22px ;
+        }
+        &:before {
+            left: -9rem;
+        }
+        &:after {
+            right: -9rem;
+            transform: translateY(-50%) scaleX(-1);
+        }
+    }
+}
+.footer__copy {
+    margin: 6rem 0 0 0;
+    text-align: center;
+    font-size: 1.6rem;
+    line-height: 1.2;
+    font-weight: 400;
+    color: $gray;
+    p {
+        margin: 0;
+    }
+    a {
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+        text-decoration: none;
+        color: $gray;
+        &:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 1px;
+            background-color: $gray;
+            transition: all .3s ease;
+        }
+        transition: all .5s ease;
+        &:hover, &:active, &:focus {
+            &:after {
+                left: 50%;
+                right: 50%;
+            }
+        }
+    }
+    span {
+        font-weight: 400;
+        color: #fff;
+        a {
+            color: #fff;
+            &:after {
+                background-color: #fff;
+            }
+        }
+    }
+}
+@media only screen and (max-width : 1200px) {
+
+}
+
+@media only screen and (max-width : 992px) {
+
+}
+
+@media only screen and (max-width : 768px) {
+
+}
+
+@media only screen and (max-width : 640px) {
+    .reviews__item {
+        width: 47.5%;
+        &:nth-child(even) {
+            margin: 0 0 4rem 5%;
+        }
+    }
+}
+
+@media only screen and (max-width : 480px) {
+    .reviews__box {
+        display: block;
+    }
+    .reviews__item {
+        width: auto;
+        &:nth-child(even) {
+            margin: 0 0 4rem 0;
+        }
+    }
+}
+
+@media only screen and (max-width : 320px) {
+
+}

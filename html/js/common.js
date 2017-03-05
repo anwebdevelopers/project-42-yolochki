@@ -16,7 +16,6 @@ window.onload = function() {
             $header.css({
                 'height' : windowHeight + 'px'
             });
-            console.log('a');
         }
     }
     fullscreen();
@@ -32,7 +31,7 @@ window.onload = function() {
     $("a[href*='#']").click(function(e) {
         e.preventDefault();
         var thisSect = $($(this).attr('href')).offset().top;
-        $('html, body').animate({scrollTop: thisSect }, ((Math.abs(thisSect - $(window).scrollTop()) * 0.1) * 5), 'linear');
+        $('html, body').animate({scrollTop: thisSect }, ((Math.abs(thisSect - $(window).scrollTop()) * 0.1) * 5), 'swing');
     });
 
 
@@ -60,6 +59,44 @@ window.onload = function() {
         fixedContentPos: false
     });
 
+    //---------------------------------------------
+    //Ввод в поле формы для подписки
+    //---------------------------------------------
+    $('.subscription__item-field input').each(function() {
+        var count = $(this).val(),
+            price = $(this).closest('.subscription__item').find('.subscription__item-price input[type="hidden"]').val();
+        $(this).closest('.subscription__item').find('.subscription__item-price-val').text(count * price);
+    });
+
+    $('.subscription__item').on('change', '.subscription__item-field input', function() {
+
+        var $this = $(this),
+            price = $(this).closest('.subscription__item').find('.subscription__item-price input').val();
+        if ($this.val() < 1 || !Number($this.val())) {
+            $this.val(1);
+        }
+        $(this).closest('.subscription__item').find('.subscription__item-price-val').text($(this).val() * price);
+    });
+
+
+    //------------------------------------------------------
+    //wiget vk
+    //------------------------------------------------------
+
+    VK.init({apiId: 5908395, onlyWidgets: true});
+    VK.Widgets.Like("vk_like", {type: "mini", height: 20});
+
+    //------------------------------------------------------
+    //wiget fb
+    //------------------------------------------------------
+
+    (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v2.8";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
 
     //------------------------------------------------------
     //Chrome Smooth Scroll

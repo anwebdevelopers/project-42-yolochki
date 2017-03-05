@@ -1,0 +1,139 @@
+.whom {
+    margin: 12rem 0 0 0;
+}
+.whom__container {
+    @extend .container;
+}
+.whom__title {
+    @extend .title;
+    position: relative;
+    z-index: 1;
+}
+.whom__box {
+    position: relative;
+    margin: 5rem 0 0 0;
+    padding: 2rem 0 0 0;
+}
+.whom__img {
+    position: absolute;
+    z-index: 0;
+    top: 53%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 49%;
+    img {
+        max-width: 100%;
+        width: auto;
+        height: auto;
+    }
+}
+.whom__row {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    &:nth-of-type(3) {
+        .whom__item {
+            width: 23%;
+        }
+    }
+}
+.whom__item {
+    width: 25%;
+    margin: 3rem 0 0 0;
+    &:first-child() {
+        text-align: right;
+    }
+}
+.whom__item-icon {
+    height: 75px;
+    line-height: 75px;
+    i[class^="icon-"] {
+        vertical-align: bottom;
+    }
+}
+.whom__item-text {
+    margin: 1rem 0 0 0;
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+.whom__text {
+    margin: 7rem 0 0 0;
+    column-count: 2;
+    column-gap: 6rem;
+    p {
+        display: inline-block;
+        vertical-align: top;
+        margin: 0 0 2rem 0;
+        font-size: 1.6rem;
+        line-height: 1.2;
+        font-weight: 400;
+    }
+}
+
+@media only screen and (max-width : 1200px) {
+
+}
+
+@media only screen and (max-width : 992px) {
+
+}
+
+@media only screen and (max-width : 768px) {
+
+}
+
+@media only screen and (max-width : 640px) {
+    .whom__img {
+        position: static;
+        transform: translate(0);
+        width: auto;
+        text-align: center;
+    }
+    .whom__row {
+        align-items: flex-start;
+        &:nth-of-type(3) {
+            .whom__item {
+                width: 40%;
+            }
+        }
+    }
+    .whom__item {
+        width: 40%;
+        margin: 3rem 5% 0 5%;
+        text-align: center;
+        &:first-child() {
+            text-align: center;
+        }
+    }
+    .whom__item-icon {
+        i[class^="icon-"] {
+            vertical-align: middle;
+        }
+    }
+    .whom__text {
+        column-gap: 3rem;
+    }
+}
+
+@media only screen and (max-width : 480px) {
+    .whom__row {
+        &:nth-of-type(3) {
+            .whom__item {
+                width: 45%;
+            }
+        }
+    }
+    .whom__item {
+        width: 45%;
+        margin: 3rem 2.5% 0 2.5%;
+    }
+    .whom__text {
+        column-count: auto;
+    }
+}
+
+@media only screen and (max-width : 320px) {
+
+}

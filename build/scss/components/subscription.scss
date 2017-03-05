@@ -1,0 +1,183 @@
+.subscription {
+    margin: 12rem 0 0 0;
+}
+.subscription__container {
+    @extend .container;
+}
+.subscription__title {
+    @extend .title;
+}
+.subscription__box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 100rem;
+    margin: 5rem auto 0 auto;
+}
+.subscription__item {
+    width: 29%;
+    margin: 0 2.16% 4rem 2.16%;
+    padding: 3.5rem 1rem;
+    border: 2px solid $gray;
+    border-radius: 2rem;
+    text-align: center;
+    transition: all .5s ease;
+    &:hover, &:active, &:focus {
+        transform: translateY(-2rem);
+    }
+}
+.subscription__item-icon {
+    height: 86px;
+    vertical-align: middle;
+}
+.subscription__item-title {
+    margin: 2rem 0 0 0;
+    font-size: 3rem;
+    line-height: 1;
+    font-weight: 400;
+}
+.subscription__item-field {
+    display: block;
+    margin: 1rem 0 0 0;
+    font-size: 2rem;
+    line-height: 1;
+    font-weight: 300;
+    white-space: nowrap;
+    input {
+        display: inline-block;
+        vertical-align: middle;
+        width: 4.4rem;
+        height: 4.4rem;
+        font-size: 2rem;
+        font-weight: 300;
+        color: #000;
+        border-radius: 1.8rem;
+        border: 2px solid $gray;
+        text-align: center;
+        outline: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        -ms-appearance: none;
+        -o-appearance: none;
+        appearance: none!important;
+        transition: all .5s ease;
+        &:hover, &:active, &:focus {
+            border-color: $main-color;
+		}
+    }
+    span {
+        margin: 0 0 0 .5rem;
+    }
+}
+.subscription__item-check {
+    margin: 2rem 0 0 0;
+    display: block;
+    transition: all .5s ease;
+    &:hover, &:active, &:focus {
+        .subscription__item-check-text {
+            &:after {
+                color: $main-color;
+                border-color: $main-color;
+            }
+        }
+    }
+    input {
+        display: none;
+        &:checked ~ .subscription__item-check-text {
+            i[class^="icon-"] {
+                transform: rotate(180deg);
+            }
+            &:after {
+                content: 'Разные запахи';
+            }
+        }
+    }
+
+}
+.subscription__item-check-text {
+    white-space: nowrap;
+    font-size: 2rem;
+    line-height: 1;
+    font-weight: 300;
+    i[class^="icon-"] {
+        transition: all .5s ease;
+    }
+    &:after {
+        content: '1 запах';
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0 0 0 .5rem;
+        border-bottom: 1px solid #000;
+        transition: all .5s ease;
+    }
+}
+.subscription__item-price {
+    margin: 2rem 0 0 0;
+    font-size: 2rem;
+    line-height: 1;
+    font-weight: 400;
+}
+.subscription__item-submit {
+    margin: 2rem 0 0 0;
+}
+.subscription__text {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 100rem;
+    margin: 0 auto;
+    p {
+        width: 45.68%;
+        margin: 0 2.16% 2rem 2.16%;
+        padding: 1.5rem;
+        font-size: 1.6rem;
+        font-weight: 400;
+        background-color: $gray;
+        border-radius: 1.5rem;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width : 1200px) {
+
+}
+
+@media only screen and (max-width : 992px) {
+
+}
+
+@media only screen and (max-width : 768px) {
+    .subscription__item {
+        width: 40%;
+        margin: 0 5% 4rem 5%;
+    }
+}
+@media only screen and (max-width : 640px) {
+    .subscription__item {
+        width: 46%;
+        margin: 0 1.5% 4rem 1.5%;
+    }
+}
+@media only screen and (max-width : 480px) {
+    .subscription__box {
+        display: block;
+    }
+    .subscription__item {
+        width: auto;
+        //max-width: 36rem;
+        margin: 0 auto 4rem auto;
+    }
+    .subscription__text {
+        display: block;
+        p {
+            width: auto;
+            //max-width: 36rem;
+            margin: 0 auto 2rem auto;
+        }
+    }
+
+}
+
+@media only screen and (max-width : 320px) {
+
+}

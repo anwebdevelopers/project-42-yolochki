@@ -1,12 +1,17 @@
 @import "bourbon";
 
 $main-color: #00b567;
+$gray: #ecf4ff;
 
 @mixin btn {
+    display: inline-block;
+    vertical-align: top;
     padding: 0;
     border: none;
     outline: none;
+    text-decoration: none;
     background-color: transparent;
+    cursor: default;
 }
 @mixin pseudo($display: block, $pos: absolute, $content: ''){
   content: $content;

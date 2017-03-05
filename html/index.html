@@ -36,27 +36,26 @@
 				<img src="img/loader-gray.gif" alt="">
 			</div>
 		</div>
-		<!-- <script>var preloader = document.querySelector('.preloader'); preloader.classList.remove('animated');preloader.classList.add('animated');</script> -->
 	</div>
 
 	<nav class="menu">
 		<ul class="menu__list">
 			<li>
-				<a href="#">В начало</a>
+				<a href="#header">В начало</a>
 			</li>
 			<li>
-				<a href="#">Подписка</a>
+				<a href="#subscription">Подписка</a>
 			</li>
 			<li>
-				<a href="#">Для кого</a>
+				<a href="#whom">Для кого</a>
 			</li>
 			<li>
-				<a href="#">Отзывы</a>
+				<a href="#reviews">Отзывы</a>
 			</li>
 		</ul>
 	</nav>
 
-	<header class="header">
+	<header id="header" class="header">
 		<div class="header__container">
 			<div class="header__logo">
 				<img src="img/logo-white.svg" alt="">
@@ -92,59 +91,239 @@
 				</div>
 			</div>
 		</div>
-		<a href="https://www.youtube.com/watch?v=HaIlmGJT_DQ" class="about__item about__item_video popup-youtube" style="background-image: url(img/img-about3.gif);"></a>
+		<a href="https://www.youtube.com/watch?v=HaIlmGJT_DQ" class="about__item about__item_video popup-youtube" style="background-image: url(img/img-about3.gif);">
+			<i class="icon-play"></i>
+		</a>
 		<div class="about__item" style="background-image: url(img/img-about4.jpg);"></div>
 	</div>
 
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br><br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br><br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br><br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
+	<section id="subscription" class="subscription">
+		<div class="subscription__container">
+			<div class="subscription__title">
+				<h2>Выберите вариант покупки себе или в подарок</h2>
+			</div>
+			<div class="subscription__box">
+				<form class="subscription__item">
+					<div class="subscription__item-icon">
+						<i class="icon-variant1"></i>
+					</div>
+					<div class="subscription__item-title">
+						<span>1 раз</span>
+					</div>
+					<label class="subscription__item-field">
+						<input type="text" value="1">
+						<span>ароматизатор</span>
+					</label>
+					<label class="subscription__item-check">
+						<input type="checkbox">
+						<span class="subscription__item-check-text">
+							<i class="icon-re"></i>
+						</span>
+					</label>
+					<div class="subscription__item-price">
+						<input type="hidden" value="150">
+						<span class="subscription__item-price-val">150</span>
+						<span class="subscription__item-price-text">руб.</span>
+					</div>
+					<div class="subscription__item-submit">
+						<button type="submit" class="button">Выбрать</button>
+					</div>
+				</form>
+				<form class="subscription__item">
+					<div class="subscription__item-icon">
+						<i class="icon-variant2"></i>
+					</div>
+					<div class="subscription__item-title">
+						<span>6 месяцев</span>
+					</div>
+					<label class="subscription__item-field">
+						<input type="text" value="1">
+						<span>ароматизатор/мес.</span>
+					</label>
+					<label class="subscription__item-check">
+						<input type="checkbox" checked>
+						<span class="subscription__item-check-text">
+							<i class="icon-re"></i>
+						</span>
+					</label>
+					<div class="subscription__item-price">
+						<input type="hidden" value="140">
+						<span class="subscription__item-price-val">140</span>
+						<span class="subscription__item-price-text"> руб./мес.</span>
+					</div>
+					<div class="subscription__item-submit">
+						<button type="submit" class="button">Выбрать</button>
+					</div>
+				</form>
+				<form class="subscription__item">
+					<div class="subscription__item-icon">
+						<i class="icon-variant3"></i>
+					</div>
+					<div class="subscription__item-title">
+						<span>Всегда</span>
+					</div>
+					<label class="subscription__item-field">
+						<input type="text" value="1">
+						<span>ароматизатор/мес.</span>
+					</label>
+					<label class="subscription__item-check">
+						<input type="checkbox" checked>
+						<span class="subscription__item-check-text">
+							<i class="icon-re"></i>
+						</span>
+					</label>
+					<div class="subscription__item-price">
+						<input type="hidden" value="130">
+						<span class="subscription__item-price-val">130</span>
+						<span class="subscription__item-price-text"> руб./мес.</span>
+					</div>
+					<div class="subscription__item-submit">
+						<button type="submit" class="button">Выбрать</button>
+					</div>
+				</form>
+			</div>
+			<div class="subscription__text">
+				<p>Плата списывается с карты один раз в месяц</p>
+				<p>Отключить подписку можно быстро в любой момент</p>
+			</div>
+		</div>
+	</section>
+
+	<section id="whom" class="whom">
+		<div class="whom__container">
+			<div class="whom__title">
+				<h2>Для кого этот сервис</h2>
+			</div>
+			<div class="whom__box">
+				<div class="whom__img">
+					<img src="img/img-whom.png" alt="">
+				</div>
+				<div class="whom__row">
+					<div class="whom__item">
+						<div class="whom__item-icon">
+							<i class="icon-whom1"></i>
+						</div>
+						<div class="whom__item-text">
+							<span>Владельцам животных</span>
+						</div>
+					</div>
+					<div class="whom__item">
+						<div class="whom__item-icon">
+							<i class="icon-whom2"></i>
+						</div>
+						<div class="whom__item-text">
+							<span>Такси / Водителям UBER</span>
+						</div>
+					</div>
+				</div>
+				<div class="whom__row">
+					<div class="whom__item">
+						<div class="whom__item-icon">
+							<i class="icon-whom3"></i>
+						</div>
+						<div class="whom__item-text">
+							<span>Курящим автовладельцам</span>
+						</div>
+					</div>
+					<div class="whom__item">
+						<div class="whom__item-icon">
+							<i class="icon-whom4"></i>
+						</div>
+						<div class="whom__item-text">
+							<span>Родителям малышей</span>
+						</div>
+					</div>
+				</div>
+				<div class="whom__row">
+					<div class="whom__item">
+						<div class="whom__item-icon">
+							<i class="icon-whom5"></i>
+						</div>
+						<div class="whom__item-text">
+							<span>Спортсменам</span>
+						</div>
+					</div>
+					<div class="whom__item">
+						<div class="whom__item-icon">
+							<i class="icon-whom6"></i>
+						</div>
+						<div class="whom__item-text">
+							<span>Любителям свежести</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="whom__text">
+				<p>Оригинальные автомобильные ароматизаторы Little Trees. Сделаны из высококапилярного качественного картона - что позволяет долго сохранять аромат и насыщенность красок изображения.</p>
+				<p>Уникальный освежитель по эффективности действия, насыщенности и стойкости запаха.</p>
+				<p>Доставка Почтой России в любой город.</p>
+				<p>Повесьте ароматизатор в любом удобном месте - в салоне автомобиля, дома или в офисе - и получайте удовольствие!</p>
+				<p>Материал: 100% спрессованная целлюлоза, полимеры, не токсичные отдушки.</p>
+				<p>С подпиской “Ёлочки” в салоне вашего автомобиля всегда приятно пахнет.</p>
+			</div>
+		</div>
+	</section>
+
+	<footer class="footer">
+		<div class="footer__container">
+			<div id="reviews" class="reviews">
+				<div class="reviews__title">
+					<h2>Наши клиенты говорят</h2>
+				</div>
+				<div class="reviews__box">
+					<div class="reviews__item">
+						<div class="reviews__item-img">
+							<img src="img/img-reviews1.png" alt="">
+						</div>
+						<div class="reviews__item-text">
+							<p>Сколько себя помню пользовался ёлочками, я их даже не выбрасываю, коллекционирую) Подписка помогает вовремя их менять и не вспоминать о такой мелочи.</p>
+						</div>
+					</div>
+					<div class="reviews__item">
+						<div class="reviews__item-img">
+							<img src="img/img-reviews2.png" alt="">
+						</div>
+						<div class="reviews__item-text">
+							<p>Елочки - это классика, стараюсь менять раз в месяц, но не всегда вспоминаю, давно хотел, чтобы это кто-то автоматизировал. <br>Спасибо yolochki.ru</p>
+						</div>
+					</div>
+				</div>
+				<div class="reviews__wiget">
+					<div id="vk_like" class="reviews__wiget-item">
+						<div ></div>
+					</div>
+					<div class="reviews__wiget-item fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="false">
+					</div>
+				</div>
+			</div>
+			<div class="contacts">
+				<div class="contacts__title">
+					<h2>Контакты</h2>
+				</div>
+				<div class="contacts__box">
+					<div class="contacts__text">
+						<p>Вы всегда можете написать или позвонить нам с любым вопросом или отзывом</p>
+					</div>
+					<div class="contacts__link">
+						<a href="mailto:mail@yolochki.ru">mail@yolochki.ru</a>
+					</div>
+					<div class="contacts__link">
+						<a href="tel:+74954095856">+7 (495) 409-5856</a>
+					</div>
+				</div>
+			</div>
+			<div class="footer__button">
+				<a href="#subscription" class="button button_color_white">Хочу ёлочки</a>
+			</div>
+			<div class="footer__copy">
+				<p>YOLOCHKI is a consumables subscription based service. © <a href="http://start.fixti.me/">Fixtime Technologies</a>, 2017  /  <span><a href="">Условия пользователя</a></span></p>
+			</div>
+		</div>
+
+	</footer>
 
 	<!-- Load Scripts Start -->
+	<script type="text/javascript" src="//vk.com/js/api/openapi.js?140"></script>
 	<script src="js/libs.js"></script>
 	<script src="js/common.js"></script>
 	<!-- Load Scripts End -->
