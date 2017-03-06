@@ -23,6 +23,41 @@ window.onload = function() {
         fullscreen();
     });
 
+    //------------------------------------------------------
+    //Home Slide
+    //------------------------------------------------------
+
+    var beginning_color = new $.Color( 'rgb(0,181,103)' );
+    var ending_color = new $.Color( 'rgb(255,255,255)' );
+
+    $(window).scroll(function() {
+
+        var scroll_pos = $(this).scrollTop();
+        var animation_begin_pos = $('.header').offset().top - $(window).height();
+        var animation_end_pos = $('.header').offset().top + $('.header').height();
+
+        if (scroll_pos > animation_begin_pos && scroll_pos < animation_end_pos) {
+
+           var percentScrolled = scroll_pos * 5 / ( animation_end_pos - animation_begin_pos );
+
+           var newRed = beginning_color.red() + ( ( ending_color.red() - beginning_color.red() ) * percentScrolled );
+           var newGreen = beginning_color.green() + ( ( ending_color.green() - beginning_color.green() ) * percentScrolled );
+           var newBlue = beginning_color.blue() + ( ( ending_color.blue() - beginning_color.blue() ) * percentScrolled );
+
+           var oldRed = ending_color.red() + ( ( beginning_color.red() - ending_color.red() ) * percentScrolled );
+           var oldGreen = ending_color.green() + ( ( beginning_color.green() - ending_color.green() ) * percentScrolled );
+           var oldBlue = ending_color.blue() + ( ( beginning_color.blue() - ending_color.blue() ) * percentScrolled );
+
+           var newColor = new $.Color( newRed, newGreen, newBlue );
+           var oldColor = new $.Color( oldRed, oldGreen, oldBlue );
+
+           $('.header').css({ backgroundColor: newColor });
+           $('.header__title').css({ color: oldColor });
+           $('.header__undertitle').css({ color: oldColor });
+           $('.header__bg-img').css({ opacity: 1 - (percentScrolled * 1.5) });
+        }
+    });
+
 
     //------------------------------------------------
     // Плавный скролл
@@ -98,41 +133,6 @@ window.onload = function() {
       js.src = "//connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v2.8";
       fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));
-
-    //------------------------------------------------------
-    //Home Slide
-    //------------------------------------------------------
-
-    var beginning_color = new $.Color( 'rgb(0,181,103)' );
-    var ending_color = new $.Color( 'rgb(255,255,255)' );
-
-    $(document).scroll(function() {
-
-        var scroll_pos = $(this).scrollTop();
-        var animation_begin_pos = $('.header').offset().top - $(window).height();
-        var animation_end_pos = $('.header').offset().top + $('.header').height();
-
-        if (scroll_pos > animation_begin_pos && scroll_pos < animation_end_pos) {
-
-           var percentScrolled = scroll_pos * 5 / ( animation_end_pos - animation_begin_pos );
-
-           var newRed = beginning_color.red() + ( ( ending_color.red() - beginning_color.red() ) * percentScrolled );
-           var newGreen = beginning_color.green() + ( ( ending_color.green() - beginning_color.green() ) * percentScrolled );
-           var newBlue = beginning_color.blue() + ( ( ending_color.blue() - beginning_color.blue() ) * percentScrolled );
-
-           var oldRed = ending_color.red() + ( ( beginning_color.red() - ending_color.red() ) * percentScrolled );
-           var oldGreen = ending_color.green() + ( ( beginning_color.green() - ending_color.green() ) * percentScrolled );
-           var oldBlue = ending_color.blue() + ( ( beginning_color.blue() - ending_color.blue() ) * percentScrolled );
-
-           var newColor = new $.Color( newRed, newGreen, newBlue );
-           var oldColor = new $.Color( oldRed, oldGreen, oldBlue );
-
-           $('.header').css({ backgroundColor: newColor });
-           $('.header__title').css({ color: oldColor });
-           $('.header__undertitle').css({ color: oldColor });
-           $('.header__bg-img').css({ opacity: 1 - (percentScrolled * 1.5) });
-        }
-    });
 
 
     //------------------------------------------------------
