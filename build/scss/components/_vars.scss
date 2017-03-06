@@ -11,7 +11,7 @@ $gray: #ecf4ff;
     outline: none;
     text-decoration: none;
     background-color: transparent;
-    cursor: default;
+    cursor: pointer;
 }
 @mixin pseudo($display: block, $pos: absolute, $content: ''){
   content: $content;

@@ -72,10 +72,11 @@ gulp.task('scripts', function() {
 		// './html/libs/superfish/dist/js/superfish.min.js',
 		// './html/libs/jQuery.mmenu/dist/js/jquery.mmenu.all.min.js',
 		// './html/libs/jquery-equalheight/jquery.equalheight.min.js',
-		'./html/libs/magnific-popup/dist/jquery.magnific-popup.min.js'
+		'./html/libs/magnific-popup/dist/jquery.magnific-popup.min.js',
+        './html/libs/jquery-color/jquery.color.js'
 		])
 	.pipe(concat('libs.js'))
-	//.pipe(uglify()) //Minify libs.js
+	.pipe(uglify()) //Minify libs.js
 	.pipe(gulp.dest('./html/js/'));
 });
 

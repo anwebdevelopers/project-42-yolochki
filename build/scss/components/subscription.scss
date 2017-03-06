@@ -96,9 +96,7 @@
 }
 .subscription__item-check-text {
     white-space: nowrap;
-    font-size: 2rem;
-    line-height: 1;
-    font-weight: 300;
+    font-size: 0;
     i[class^="icon-"] {
         transition: all .5s ease;
     }
@@ -107,8 +105,12 @@
         display: inline-block;
         vertical-align: middle;
         margin: 0 0 0 .5rem;
+        font-size: 2rem;
+        line-height: 1;
+        font-weight: 300;
         border-bottom: 1px solid #000;
         transition: all .5s ease;
+        cursor: pointer;
     }
 }
 .subscription__item-price {
