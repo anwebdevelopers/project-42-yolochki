@@ -8,26 +8,9 @@
     height: 0;
     background-color: #fff;
     overflow: hidden;
-    &.animated {
-        animation-name: preloader;
-        animation-duration: 3s;
-        animation-fill-mode: forwards;
-        .preloader__logo {
-            animation-name: preloader__logo;
-            animation-duration: 3s;
-            animation-fill-mode: forwards;
-        }
-        .preloader__text {
-            animation-name: preloader__text;
-            animation-duration: 3s;
-            animation-fill-mode: forwards;
-        }
-        .preloader__img {
-            animation-name: preloader__img;
-            animation-duration: 3s;
-            animation-fill-mode: forwards;
-        }
-    }
+    animation-name: preloader;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
 }
 @keyframes preloader {
     0% {
@@ -56,6 +39,9 @@
     width: 51.8rem;
     opacity: 0;
     transform: translateY(300%);
+    animation-name: preloader__logo;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
     img {
         max-width: 100%;
         width: auto;
@@ -98,6 +84,9 @@
     text-align: center;
     opacity: 0;
     transform: translateY(300%);
+    animation-name: preloader__text;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
 }
 @keyframes preloader__text {
     0% {
@@ -130,6 +119,9 @@
     text-align: center;
     opacity: 0;
     transform: translateY(300%);
+    animation-name: preloader__img;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
     img {
         max-width: 100%;
         width: auto;

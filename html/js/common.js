@@ -63,9 +63,10 @@ window.onload = function() {
     //Ввод в поле формы для подписки
     //---------------------------------------------
     $('.subscription__item-field input').each(function() {
-        var count = $(this).val(),
-            price = $(this).closest('.subscription__item').find('.subscription__item-price input[type="hidden"]').val();
-        $(this).closest('.subscription__item').find('.subscription__item-price-val').text(count * price);
+        var $this = $(this),
+            count = $this.val(),
+            price = $this.closest('.subscription__item').find('.subscription__item-price input').val();
+        $this.closest('.subscription__item').find('.subscription__item-price-val').text(count * price);
     });
 
     $('.subscription__item').on('change', '.subscription__item-field input', function() {
@@ -75,7 +76,7 @@ window.onload = function() {
         if ($this.val() < 1 || !Number($this.val())) {
             $this.val(1);
         }
-        $(this).closest('.subscription__item').find('.subscription__item-price-val').text($(this).val() * price);
+        $this.closest('.subscription__item').find('.subscription__item-price-val').text($this.val() * price);
     });
 
 
