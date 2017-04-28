@@ -10,29 +10,29 @@ input:focus:-moz-placeholder           {color: transparent}
 input:focus:-ms-input-placeholder      {color: transparent}
 
 *::-webkit-input-placeholder {
-	color: #666;
+	color: #000;
 	opacity: 1;
 }
 *:-moz-placeholder {
-	color: #666;
+	color: #000;
 	opacity: 1;
 }
 *::-moz-placeholder {
-	color: #666;
+	color: #000;
 	opacity: 1;
 }
 
 *:-ms-input-placeholder {
-	color: #666;
+	color: #000;
 	opacity: 1;
 }
 body input:focus:required:invalid,
 body textarea:focus:required:invalid {
-	color: #666;
+	color: #000;
 }
 body input:required:valid,
 body textarea:required:valid {
-	color: #666;
+	color: #000;
 }
 *,
 *:before,
@@ -71,7 +71,7 @@ body {
 }
 a {
 	outline: none !important;
-	color: darken($main-color, 10%);
+	color: $main-color;
 }
 .title {
 	text-align: center;
@@ -98,6 +98,12 @@ a {
 	&:hover, &:active, &:focus {
 		background-color: darken($main-color, 5%);
 	}
+	&[disabled] {
+		color: #999999;
+		border: 1px solid #ececec;
+        background-color: #f0f5f7;
+		cursor: default;
+    }
 }
 .button_color_white {
 	background-color: #fff;
@@ -112,6 +118,8 @@ a {
 @import "components/subscription.scss";
 @import "components/whom.scss";
 @import "components/footer.scss";
+@import "components/page.scss";
+
 
 @import "build/scss/components/magnific-popup.scss";
 

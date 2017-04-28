@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+	<meta charset="utf-8">
+
+	<title>#yolochki Подписка на автомобильный освежитель</title>
+	<meta name="description" content="">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<meta property="og:image" content="path/to/image.jpg">
+
+	<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
+
+	<link rel="stylesheet" href="css/main.min.css">
+
+</head>
+
+<body class="page">
+
+	<header class="page-header">
+		<div class="page-header__container">
+			<div class="page-header__box">
+				<ul class="page-header__nav">
+					<li class="active"><a href="#">Профиль</a></li>
+					<li><a href="#">Заказы</a></li>
+				</ul>
+				<div class="page-header__logo">
+					<img src="img/logo-green.png" alt="">
+				</div>
+				<ul class="page-header__nav">
+					<li><a href="#">Выход</a></li>
+				</ul>
+			</div>
+		</div>
+	</header>
+
+	<main class="page-main">
+		<div class="page-main__container">
+			<div class="page-main__box">
+				<aside class="page-main__aside">
+					<div class="choice">
+						<h3 class="choice__title">Действующая подписка</h3>
+						<div class="choice__item-icon">
+							<i class="icon-variant3"></i>
+						</div>
+						<div class="choice__item-title">
+							<span>Всегда</span>
+						</div>
+						<label class="choice__item-field">
+							<input type="text" value="1">
+							<span>ароматизатор/мес.</span>
+						</label>
+						<label class="choice__item-check">
+							<input type="checkbox" checked>
+							<span class="choice__item-check-text">
+								<i class="icon-re"></i>
+							</span>
+						</label>
+						<div class="choice__item-price">
+							<span class="choice__item-price-val">130</span>
+							<span class="choice__item-price-text"> руб./мес.</span>
+						</div>
+						<div class="choise__item-link">
+							<a href="#">Отменить подписку</a>
+						</div>
+					</div>
+				</aside>
+				<div class="page-main__content">
+					<!-- Для скрытия добавить class="hide" -->
+					<div class="address hide">
+						<button type="button" class="address__change">Изменить</button>
+						<h3 class="address__title"><i class="icon-map"></i>Введите адрес доставки</h3>
+
+						<form class="address__form">
+							<input type="text" class="address__form-input" placeholder="Город" required>
+							<input type="text" class="address__form-input" placeholder="Улица" required>
+							<input type="text" class="address__form-input address__form-input_50percent_left" placeholder="Дом" required>
+							<input type="text" class="address__form-input address__form-input_50percent_right" placeholder="Квартира" required>
+							<input type="text" class="address__form-input" placeholder="Комментарии к доставке" required>
+							<button type="button" class="address__form-button button">Продолжить</button>
+
+						</form>
+					</div>
+
+					<div class="recipient hide">
+						<button type="button" class="recipient__change">Изменить</button>
+						<h3 class="recipient__title"><i class="icon-face"></i>Добавьте контакты получателя</h3>
+						<form class="recipient__form">
+							<input type="text" class="recipient__form-input" placeholder="Фамилия и имя" required>
+							<input type="text" class="recipient__form-input" placeholder="E-mail" required>
+							<input type="text" class="recipient__form-input" placeholder="Телефон" required>
+							<button type="button" class="recipient__form-button button">Продолжить</button>
+						</form>
+					</div>
+
+					<div class="payment hide">
+						<h3 class="payment__title"><i class="icon-card"></i>Оплата</h3>
+						<P class="payment__text">Ежемесячное списание с карты 130 руб., начиная с 26.02.2017</P>
+						<form class="payment__form">
+							<button type="button" class="payment__form-add">Добавить карту</button>
+							<p class="payment__form-text">Вы сможете отвязать эту карту в любое время</p>
+							<!-- <div class="payment__form-inner">
+								<label class="payment__form-label">
+									<span class="payment__form-text">Номер карты</span>
+									<input type="text" class="payment__form-input" placeholder="0000 0000 0000 0000" required>
+								</label>
+								<div class="payment__form-label">
+									<span class="payment__form-text">Срок действия (ММ/ГГ)</span>
+									<input type="text" class="payment__form-input payment__form-input_small" placeholder="ММ" required>
+									<span class="payment__form-seperator">/</span>
+									<input type="text" class="payment__form-input payment__form-input_small" placeholder="ГГ" required>
+								</div>
+								<label class="payment__form-label">
+									<span class="payment__form-text">Имя держателя карты</span>
+									<input type="text" class="payment__form-input" placeholder="SERGEY IVANOV" required>
+								</label>
+								<label class="payment__form-label">
+									<span class="payment__form-text">CVC2 / CVV</span>
+									<input type="text" class="payment__form-input payment__form-input_small" placeholder="000" required>
+								</label>
+								<div class="payment__form-img">
+									<img src="img/img-payment-form.png" alt="">
+								</div>
+							</div> -->
+							<button class="payment__form-button button" disabled>Завершить заказ</button>
+						</form>
+
+					</div>
+
+					<div class="payment">
+						<h3 class="payment__title"><i class="icon-card"></i>Оплата</h3>
+						<P class="payment__text">Ежемесячное списание с карты 130 руб., начиная с 26.02.2017</P>
+						<form class="payment__form">
+							<button type="button" class="payment__form-add">Добавить карту</button>
+							<p class="payment__form-text">Вы сможете отвязать эту карту в любое время</p>
+							<!-- <div class="payment__form-inner">
+								<label class="payment__form-label">
+									<span class="payment__form-text">Номер карты</span>
+									<input type="text" class="payment__form-input" placeholder="0000 0000 0000 0000" required>
+								</label>
+								<div class="payment__form-label">
+									<span class="payment__form-text">Срок действия (ММ/ГГ)</span>
+									<input type="text" class="payment__form-input payment__form-input_small" placeholder="ММ" required>
+									<span class="payment__form-seperator">/</span>
+									<input type="text" class="payment__form-input payment__form-input_small" placeholder="ГГ" required>
+								</div>
+								<label class="payment__form-label">
+									<span class="payment__form-text">Имя держателя карты</span>
+									<input type="text" class="payment__form-input" placeholder="SERGEY IVANOV" required>
+								</label>
+								<label class="payment__form-label">
+									<span class="payment__form-text">CVC2 / CVV</span>
+									<input type="text" class="payment__form-input payment__form-input_small" placeholder="000" required>
+								</label>
+								<div class="payment__form-img">
+									<img src="img/img-payment-form.png" alt="">
+								</div>
+							</div> -->
+							<button class="payment__form-button button" disabled>Завершить заказ</button>
+						</form>
+
+					</div>
+
+					<div class="payment">
+						<h3 class="payment__title"><i class="icon-card"></i>Оплата</h3>
+						<P class="payment__text">Ежемесячное списание с карты 130 руб., начиная с 26.02.2017</P>
+						<form class="payment__form">
+							<button type="button" class="payment__form-add">Добавить карту</button>
+							<p class="payment__form-text">Вы сможете отвязать эту карту в любое время</p>
+							<div class="payment__form-inner">
+								<label class="payment__form-label">
+									<span class="payment__form-text">Номер карты</span>
+									<input type="text" class="payment__form-input" placeholder="0000 0000 0000 0000" required>
+								</label>
+								<div class="payment__form-label">
+									<span class="payment__form-text">Срок действия (ММ/ГГ)</span>
+									<input type="text" class="payment__form-input payment__form-input_small" placeholder="ММ" required>
+									<span class="payment__form-seperator">/</span>
+									<input type="text" class="payment__form-input payment__form-input_small" placeholder="ГГ" required>
+								</div>
+								<label class="payment__form-label">
+									<span class="payment__form-text">Имя держателя карты</span>
+									<input type="text" class="payment__form-input" placeholder="SERGEY IVANOV" required>
+								</label>
+								<label class="payment__form-label">
+									<span class="payment__form-text">CVC2 / CVV</span>
+									<input type="text" class="payment__form-input payment__form-input_small" placeholder="000" required>
+								</label>
+								<div class="payment__form-img">
+									<img src="img/img-payment-form.png" alt="">
+								</div>
+							</div>
+							<button class="payment__form-button button">Завершить заказ</button>
+						</form>
+					</div>
+
+					<div class="payment">
+						<h3 class="payment__title"><i class="icon-card"></i>Оплата</h3>
+						<P class="payment__text">Ежемесячное списание с карты 130 руб., начиная с 26.02.2017</P>
+						<form class="payment__form">
+							<button class="payment__form-remove"><i class="icon-del"></i></button>
+							<h4 class="payment__form-title">Ivan Ivanov xxxx-1212</h4>
+							<p class="payment__form-text">действие до 07/18</p>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<footer class="page-footer">
+		<div class="page-footer__container">
+			<p class="page-footer__copy">YOLOCHKI is a consumables subscription based service. © Fixtime Technologies, 2017</p>
+		</div>
+	</footer>
+
+	<!-- Load Scripts Start -->
+	<script src="js/libs.js"></script>
+	<script src="js/common.js"></script>
+	<!-- Load Scripts End -->
+
+</body>
+</html>

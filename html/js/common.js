@@ -3,61 +3,62 @@ window.onload = function() {
     'use strict';
     var w = $(window).width();
 
-
-    //------------------------------------------------------------
-    //fullscreen header
-    //------------------------------------------------------------
-    var $header = $('.header');
-    function fullscreen() {
-        $header.removeAttr('style');
-        var windowHeight = $(window).height(),
-            headerHeight = $header.height();
-        if (windowHeight > $header.height()) {
-            $header.css({
-                'height' : windowHeight + 'px'
-            });
+    if ($('.header').length) {
+        //------------------------------------------------------------
+        //fullscreen header
+        //------------------------------------------------------------
+        var $header = $('.header');
+        function fullscreen() {
+            $header.removeAttr('style');
+            var windowHeight = $(window).height(),
+                headerHeight = $header.height();
+            if (windowHeight > $header.height()) {
+                $header.css({
+                    'height' : windowHeight + 'px'
+                });
+            }
         }
-    }
-    fullscreen();
-    $(window).resize(function() {
         fullscreen();
-    });
+        $(window).resize(function() {
+            fullscreen();
+        });
 
-    //------------------------------------------------------
-    //Home Slide
-    //------------------------------------------------------
+        //------------------------------------------------------
+        //Home Slide
+        //------------------------------------------------------
 
-    var beginning_color = new $.Color( 'rgb(0,181,103)' );
-    var ending_color = new $.Color( 'rgb(255,255,255)' );
+        var beginning_color = new $.Color( 'rgb(0,181,103)' );
+        var ending_color = new $.Color( 'rgb(255,255,255)' );
 
-    $(window).scroll(function() {
+        $(window).scroll(function() {
 
-        var scroll_pos = $(this).scrollTop();
-        var animation_begin_pos = $('.header').offset().top - $(window).height();
-        var animation_end_pos = $('.header').offset().top + $('.header').height();
+            var scroll_pos = $(this).scrollTop();
+            var animation_begin_pos = $('.header').offset().top - $(window).height();
+            var animation_end_pos = $('.header').offset().top + $('.header').height();
 
-        if (scroll_pos > animation_begin_pos && scroll_pos < animation_end_pos) {
+            if (scroll_pos > animation_begin_pos && scroll_pos < animation_end_pos) {
 
-           var percentScrolled = scroll_pos * 5 / ( animation_end_pos - animation_begin_pos );
+               var percentScrolled = scroll_pos * 5 / ( animation_end_pos - animation_begin_pos );
 
-           var newRed = beginning_color.red() + ( ( ending_color.red() - beginning_color.red() ) * percentScrolled );
-           var newGreen = beginning_color.green() + ( ( ending_color.green() - beginning_color.green() ) * percentScrolled );
-           var newBlue = beginning_color.blue() + ( ( ending_color.blue() - beginning_color.blue() ) * percentScrolled );
+               var newRed = beginning_color.red() + ( ( ending_color.red() - beginning_color.red() ) * percentScrolled );
+               var newGreen = beginning_color.green() + ( ( ending_color.green() - beginning_color.green() ) * percentScrolled );
+               var newBlue = beginning_color.blue() + ( ( ending_color.blue() - beginning_color.blue() ) * percentScrolled );
 
-           var oldRed = ending_color.red() + ( ( beginning_color.red() - ending_color.red() ) * percentScrolled );
-           var oldGreen = ending_color.green() + ( ( beginning_color.green() - ending_color.green() ) * percentScrolled );
-           var oldBlue = ending_color.blue() + ( ( beginning_color.blue() - ending_color.blue() ) * percentScrolled );
+               var oldRed = ending_color.red() + ( ( beginning_color.red() - ending_color.red() ) * percentScrolled );
+               var oldGreen = ending_color.green() + ( ( beginning_color.green() - ending_color.green() ) * percentScrolled );
+               var oldBlue = ending_color.blue() + ( ( beginning_color.blue() - ending_color.blue() ) * percentScrolled );
 
-           var newColor = new $.Color( newRed, newGreen, newBlue );
-           var oldColor = new $.Color( oldRed, oldGreen, oldBlue );
+               var newColor = new $.Color( newRed, newGreen, newBlue );
+               var oldColor = new $.Color( oldRed, oldGreen, oldBlue );
 
-           $('.header').css({ backgroundColor: newColor });
-           $('.header__title').css({ color: oldColor });
-           $('.header__undertitle').css({ color: oldColor });
-           $('.header__bg-img').css({ opacity: 1 - (percentScrolled * 1.5) });
-        }
-    });
-
+               $('.header').css({ backgroundColor: newColor });
+               $('.header__title').css({ color: oldColor });
+               $('.header__undertitle').css({ color: oldColor });
+               $('.header__bg-img').css({ opacity: 1 - (percentScrolled * 1.5) });
+            }
+        });
+    
+    }
 
     //------------------------------------------------
     // Плавный скролл
@@ -118,9 +119,11 @@ window.onload = function() {
     //------------------------------------------------------
     //wiget vk
     //------------------------------------------------------
+    if ($('#vk_like').length) {
+        VK.init({apiId: 5908395, onlyWidgets: true});
+        VK.Widgets.Like("vk_like", {type: "mini", height: 20});
+    }
 
-    VK.init({apiId: 5908395, onlyWidgets: true});
-    VK.Widgets.Like("vk_like", {type: "mini", height: 20});
 
     //------------------------------------------------------
     //wiget fb
